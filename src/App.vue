@@ -1,28 +1,24 @@
 <template>
-  <div class="container content">
-   <Header class="mt-3" :currentPage="currentPage" :totalPage="totalPage" :step="step"/>
-
-   <AboutYou v-if="currentPage === 1"/>
-    <AboutCompany v-if="currentPage === 2"/>
-    <Finishing v-if="currentPage === 3"/>
-    <Footer :next-process="nextProcess" :currentPage="currentPage" :totalPage="totalPage" :prev-process="prevProcess" :reset-process="resetProcess"/>
-  </div>
+    <div class="container content">
+      <Header class="mt-3" :currentPage="currentPage" :totalPage="totalPage" :step="step"/>
+      <Body :currentPage="currentPage"
+            :next-process="nextProcess" :totalPage="totalPage" :prev-process="prevProcess" :reset-process="resetProcess" :finish-process="finishProcess"
+      />
+    </div>
 </template>
 <script>
 
 
 import Header from "@/components/Header";
-import AboutYou from "@/components/AboutYou";
-import AboutCompany from "@/components/AboutCompany";
-import Footer from "@/components/Footer";
-import Finishing from "@/components/Finishing";
+import Body from "./components/Body";
 export default {
-  components: {Finishing, Footer, AboutCompany, AboutYou, Header},
+  components: {Header,Body},
   data(){
     return {
       currentPage : 1,
       progress: 0,
       totalPage  : 3,
+      formStatus : false,
       step : [{
         step : 1,
         status : true,
@@ -53,6 +49,7 @@ export default {
       })
     },
     prevProcess(){
+
       if(this.currentPage > 1){
         this.step = [...this.step].map(item => {
           if(item.step === this.currentPage) {
@@ -64,6 +61,7 @@ export default {
       this.currentPage === 1 ? this.currentPage = 1 : this.currentPage --
     },
     resetProcess(){
+
       this.currentPage = 1
       this.step = [...this.step].map(item => {
         if(item.step !== this.currentPage){
@@ -71,6 +69,9 @@ export default {
         }
         return item
       })
+    },
+    finishProcess(){
+      alert('The form submit successfully')
     }
   },
 
@@ -85,5 +86,6 @@ export default {
   text-align: center;
   color: #a3aaaf;
   margin-top: 60px;
+  text-transform: capitalize;
 }
 </style>
