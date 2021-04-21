@@ -72,6 +72,7 @@ export default {
     },
     finishProcess(){
       alert('The form submit successfully')
+
     }
   },
 
