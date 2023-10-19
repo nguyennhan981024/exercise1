@@ -232,7 +232,7 @@ export default {
       this.checkbox = false;
       this.checkbox = true;
       this.checkbox = false;
-      this.numberofemployee = "sadasd";
+      this.numberofemployee = "sadasdasdasdas";
     },
   },
 };
