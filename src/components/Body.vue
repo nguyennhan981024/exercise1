@@ -231,8 +231,6 @@ export default {
       this.checkbox = true;
       this.checkbox = false;
       this.numberofemployee = "sadasdasdasdas";
-      this.numberofemployee = "sadasdasdasdas";
-      this.numberofemployee = "sadasdasdasdas";
     },
   },
 };
