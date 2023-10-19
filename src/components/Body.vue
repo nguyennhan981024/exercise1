@@ -224,15 +224,7 @@ export default {
   methods: {
     reset() {
       this.resetProcess();
-      this.companyname = "";
-      this.name = "";
       this.email = "";
-      this.numberofemployee = "";
-      this.select = "";
-      this.checkbox = false;
-      this.checkbox = true;
-      this.checkbox = false;
-      this.numberofemployee = "sadasdasdasdas";
     },
   },
 };
