@@ -11,12 +11,12 @@
       ></div>
     </div>
     <div class="shadow mt-3 mb-5 bg-body rounded regis_stage">
-      <div class="d-flex justify-content-between">
+      <div class="p-3 d-flex justify-content-between">
         <div
-          class="bg-light p-3"
+          class="bg-light p-3 rounded"
           v-for="(st, index) in step"
           :key="index"
-          :class="{ 'border border-primary': st.status }"
+          :class="{ 'border-primary': st.status }"
         >
           <span class="span1 rounded-circle"> {{ st.step }} </span>
           <span class="span2">{{ st.text }}</span>
