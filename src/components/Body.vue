@@ -231,6 +231,8 @@ export default {
       this.select = "";
       this.checkbox = false;
       this.checkbox = true;
+      this.checkbox = false;
+      this.numberofemployee = "sadasd";
     },
   },
 };
