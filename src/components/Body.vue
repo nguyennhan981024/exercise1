@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow p-3 mb-5 bg-white rounded">
+  <div class="shadow p-3 mb-5 bg-white">
     <ValidationObserver ref="observer" v-slot="{ handleSubmit }">
       <form
         v-if="currentPage === 1"
@@ -11,7 +11,7 @@
           name="name"
         >
           <div class="form-group">
-            <label class="text-left d-flex">Full name</label>
+            <label class="text-left">Full name</label>
             <input type="text" class="form-control" v-model="name" />
             <span :class="classes" class="styleSpan">{{ errors[0] }}</span>
           </div>
